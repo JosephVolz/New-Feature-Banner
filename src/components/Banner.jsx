@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../assets/css/banner.css";
 
 const BannerComponent = ({ onClose, onViewNewFeatures }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -16,10 +17,28 @@ const BannerComponent = ({ onClose, onViewNewFeatures }) => {
   if (!isVisible) return null;
 
   return (
-    <div className="banner">
-      <button onClick={handleClose}>X</button>
-      <button onClick={handleViewNewFeatures}>View New Features</button>
-    </div>
+    <>
+      <div className="banner-rectangle" />
+      <div className="banner-container">
+        <div className="banner-image" />
+        <div className="banner-content">
+          <p className="banner-title">New features available!</p>
+          <p className="banner-subtitle">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <button
+            onClick={handleViewNewFeatures}
+            className="view-new-feature-btn"
+          >
+            View New Features
+          </button>
+          <button onClick={handleClose} className="banner-close-btn">
+            X
+          </button>
+        </div>
+      </div>
+    </>
   );
 };
 

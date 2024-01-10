@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Banner from "./Banner";
 import Popup from "./Popup";
+import "../assets/css/dashboard.css";
 
-const SHOW_SECOND = 1000;
+const SHOW_SECOND = 10000;
 
 function Dashboard() {
   const [showBanner, setShowBanner] = useState(false);
